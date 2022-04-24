@@ -3,6 +3,7 @@
 
 import itertools
 import math
+import time 
 
 
 def paint(fname, solve_method = None):
@@ -36,4 +37,6 @@ def paint(fname, solve_method = None):
 
 
 if __name__ == "__main__":
+    start = time.time()
     paint("sample10_1")
+    print(f"Seconds: {time.time() - start}")
