@@ -4,6 +4,7 @@
 import itertools
 import math
 import time 
+from Algorithm as alg import * 
 
 
 def paint(fname, solve_method = None):
@@ -36,6 +37,8 @@ def paint(fname, solve_method = None):
     
     print(m, ma)
 
+    # alg.brutev1.solve(arr, quota)
+
     
 
 def wrapped_tester(cords):
@@ -47,6 +50,9 @@ def wrapped_tester(cords):
 
 
 if __name__ == "__main__":
-    start = time.time()
-    paint("sample10_1")
-    print(f"Seconds: {time.time() - start}")
+    # start = time.time()
+    # paint("sample10_1")
+    # print(f"Seconds: {time.time() - start}")
+
+    alg.brutev1.solve("arr", "quota")
+
