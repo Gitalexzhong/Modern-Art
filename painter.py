@@ -4,7 +4,8 @@
 import itertools
 import math
 import time 
-from Algorithm as alg import * 
+# import Algorithm as algo
+import Algorithm.brutev1
 
 
 def paint(fname, solve_method = None):
@@ -53,6 +54,6 @@ if __name__ == "__main__":
     # start = time.time()
     # paint("sample10_1")
     # print(f"Seconds: {time.time() - start}")
-
-    alg.brutev1.solve("arr", "quota")
+    Algorithm.brutev1.solve("arr", "quota")
+    # algo.brutev1.solve("arr", "quota")
 
