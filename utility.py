@@ -1,4 +1,4 @@
-  
+# Utility function for the painter function  
 
 def wrapped_tester(cords):
     for x, y in cords:
