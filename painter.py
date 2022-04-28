@@ -1,11 +1,12 @@
 
 
 
+import importlib
 import itertools
 import math
 import time 
 # import Algorithm as algo
-from algorithm import *
+# from algorithm import *
 
 def paint(fname, solve_method = None):
     f = open(f"Maps/{fname}", "r")
@@ -16,7 +17,15 @@ def paint(fname, solve_method = None):
     # alg.brutev1.solve(arr, quota)
     # algorithm.brutev1.solve(arr, quota)
     # solve(arr, quota)
-    brutev1()
+    # brutev1()
+
+    print("hiii")
+
+    importlib.import_module("algorithm." + solve_method)
+
+    # import algorithm.brutev1 
+    # import algorithm.{solve_method}
+
     
     
 
