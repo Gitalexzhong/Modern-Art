@@ -24,3 +24,25 @@
 - Weight output
 - Multi dimensionality graphs 
 
+# Sample Outputs 
+
+Inputted 5x5 grid with 10 select values will be 
+
+```
+5 5 10
+03522
+09468
+52978
+04416
+23807
+```
+
+Result 
+```
+.....
+.##.#
+..###
+..#.#
+..#.#
+```
+
