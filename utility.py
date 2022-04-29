@@ -6,3 +6,7 @@ def wrapped_tester(cords):
             return False
     
     return True
+
+# Function designed to open files based on header for 2d algo
+def import_map(filename):
+    print("hi")
