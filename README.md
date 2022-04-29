@@ -1,6 +1,7 @@
 # Modern Art
  Personal project based on the Modern-Art question in IMCxCSESoc 2022 competition 
 
+
 # The problem
  To solve the problem of creating the highest mask for a given map of values. 
  Each grid of values needs to be able to generate the largest selection of values in which all values are interconnected. 
@@ -11,9 +12,10 @@
  It will also be a learning project to explore the use of full stack programming, including the use of API, frontend and backend implementations.
 
 # Current technologies planned
-[ ] Backend - Python
-[ ] Frontend - Undecided 
-[ ] 
+- [ ] Backend - Python
+- [ ] Frontend - Undecided 
+- [ ] API - Undecided
+- [ ] Other
 
 # Future Plans
  Solving this challenging problem by itself will be a challenge by itself, especially making it efficient. 
@@ -37,7 +39,7 @@ Inputted 5x5 grid with 10 select values will be
 23807
 ```
 
-Result 
+Result (Select values Sum = 70 and all select are interconnect)
 ```
 .....
 .##.#
@@ -46,3 +48,5 @@ Result
 ..#.#
 ```
 
+## Methodology
+A brute force method may be used for these simplistic graphs, More complicated graphs like 100x100 will require radically more efficient algorithms.
