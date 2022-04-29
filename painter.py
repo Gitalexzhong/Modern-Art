@@ -1,25 +1,13 @@
-
-
-
 import importlib
-import itertools
-import math
-import time 
-# import Algorithm as algo
-# from algorithm import *
+import time
+from utility import import_map 
 
 def paint(fname, solve_method = None):
-    f = open(f"Maps/{fname}", "r")
-    l, b, quota = f.readline().split(' ')
-
-    arr = [[char for char in line] for line in f.read().splitlines()]
-
-    print("hiii")
+    l, b, quota, arr = import_map(fname)
 
     a = importlib.import_module("algorithm." + solve_method)
 
     a.solve(arr, quota)
-    
 
 if __name__ == "__main__":
     start = time.time()
