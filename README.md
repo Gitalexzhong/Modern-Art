@@ -28,7 +28,7 @@
 
 ## Algorithm planed
 
-- [ ] Brute force - combinatorics
+- [X] Brute force - combinatorics
 - [ ] Brute force - Combinatorics, max value based
 - [ ] Bidirectional - max value based 
 

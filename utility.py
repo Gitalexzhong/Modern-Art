@@ -8,7 +8,7 @@ def wrapped_tester(cords):
     return True
 
 # Function designed to open files based on header for 2d algo
-def import_map(filename):
+def import_map_2d(filename):
     f = open(f"Maps/{filename}", "r")
     l, b, quota = f.readline().split(' ')
 

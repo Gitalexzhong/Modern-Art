@@ -1,6 +1,6 @@
 import importlib
 import time
-from utility import import_map 
+from utility import import_map_2d
 
 def paint(fname, solve_method = None):
     l, b, quota, arr = import_map(fname)
