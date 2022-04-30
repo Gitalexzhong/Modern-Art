@@ -5,7 +5,7 @@ from utility import wrapped_tester
 def solve(arr, quota):
     print("brute")
 
-    print(arr)
+    # print(arr)
 
     l = len(arr)
     b = len(arr[0])
@@ -27,6 +27,10 @@ def solve(arr, quota):
             if sa > m:
                 m = sa
                 ma = s
+                out = test
     
-    print(m, ma)
+    # print(m, ma)
+    return out
+
+
 
