@@ -26,7 +26,7 @@ def solve(arr, quota):
             
             if sa > m:
                 m = sa
-                ma = s
+                
                 out = test
     
     # print(m, ma)
