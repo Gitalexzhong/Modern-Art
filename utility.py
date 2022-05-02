@@ -45,7 +45,5 @@ def grid_coloured_print(arr, l, b, mask, export_type):
                     print(arr[i][j], end='')
 
             print('')
-    # print("\033[1;30;40m Dark Gray      \033[0m 1;30;40m            \033[0;30;47m Black      \033[0m 0;30;47m               \033[0;37;41m Black      \033[0m 0;37;41m")
-
 
     return
