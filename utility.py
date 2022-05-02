@@ -1,4 +1,14 @@
 # Utility function for the painter function  
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
 
 # Function to check if each selection of cord are connected to another selection cord
 def wrapped_tester(cords):
@@ -26,6 +36,20 @@ def grid_mask_print(arr, l, b, mask, export_type):
                     print('#', end='')
                 else: 
                     print('.', end='')
+
+            print('')
+
+    return
+
+# Print result based on a coloured grid
+def grid_coloured_print(arr, l, b, mask, export_type):
+    if export_type == None or export_type == "BNW": 
+        for i in range(l):
+            for j in range(b):
+                if (i, j) in mask:
+                    print(f"{bcolors.WARNING}{arr[i][j]}{bcolors.ENDC}", end='')
+                else: 
+                    print(arr[i][j], end='')
 
             print('')
 
