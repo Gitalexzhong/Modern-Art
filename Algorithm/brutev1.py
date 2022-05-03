@@ -12,11 +12,18 @@ def solve(arr, quota):
 
     cords = [(aq, ab) for aq in range(int(l)) for ab in range(int(b))]
 
+    print("mem")
     comb = list(itertools.combinations(cords, int(quota)))
 
     m = 0
 
+    print("hi")
+    ran = len(comb)
+    print(ran)
+    # ttno = 1
+
     for test in comb:
+        # print(str(ttno) + "/" + str(ran))
         if wrapped_tester(test):
             s = 0 
             for i, j in test:
@@ -28,6 +35,8 @@ def solve(arr, quota):
                 m = sa
                 
                 out = test
+        # ttno += 1
+        
     
     # print(m, ma)
     return out

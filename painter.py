@@ -9,10 +9,12 @@ def paint(fname, solve_method = None, export_type = None):
 
     mask = algo.solve(arr, quota)
 
-    grid_coloured_print(arr, int(l), int(b), mask, export_type)
+    # grid_coloured_print(arr, int(l), int(b), mask, export_type)
+    grid_mask_print(arr, int(l), int(b), mask, export_type)
 
 if __name__ == "__main__":
     start = time.time()
-    paint("sample10_1", "brutev1")
+    # paint("sample10_1", "brutev1")
+    paint("sample100_1", "brutev1")
     print(f"Seconds: {time.time() - start}")
 
