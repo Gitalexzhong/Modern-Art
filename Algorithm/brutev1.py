@@ -17,7 +17,7 @@ def solve(arr, quota):
 
     m = 0
 
-    print("hi")
+    # print("hi")
     ran = len(comb)
     print(ran)
     # ttno = 1
