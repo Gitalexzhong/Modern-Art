@@ -8,7 +8,7 @@ def import_map_2d(filename):
 
     arr = [[char for char in line] for line in f.read().splitlines()]
 
-    return int(l), int(b), quota, arr
+    return int(l), int(b), int(quota), arr
 
 # Function to check if each selection of cord are connected to another selection cord
 def wrapped_tester(cords):
@@ -19,7 +19,7 @@ def wrapped_tester(cords):
     return True
 
 # Takes in a masked cords and outputs to stdout the masked area
-def grid_mask_print(arr, l, b, mask, export_type):
+def grid_mask_print(arr, l, b, mask, score, export_type):
 
     if export_type == None or export_type == "BNW": 
 
@@ -32,6 +32,7 @@ def grid_mask_print(arr, l, b, mask, export_type):
                     print('.', end='')
 
             print('')
+        print(f"Score: {score}")
 
     elif export_type == "grid_coloured_print": 
         
@@ -44,5 +45,7 @@ def grid_mask_print(arr, l, b, mask, export_type):
                     print(arr[i][j], end='')
 
             print('')
+        
+        print(f"Score: {score}")
 
     return
