@@ -15,4 +15,3 @@ if __name__ == "__main__":
     start = time.time()
     paint("sample10_1", "brutev1", "grid_coloured_print")
     print(f"Seconds: {time.time() - start}")
-
