@@ -1,5 +1,5 @@
 # Utility function for the painter function  
-# from termcolor import Color
+from colorama import Fore, Style
 
 # Function to check if each selection of cord are connected to another selection cord
 def wrapped_tester(cords):
@@ -20,9 +20,12 @@ def import_map_2d(filename):
 
 # Takes in a masked cords and outputs to stdout the masked area
 def grid_mask_print(arr, l, b, mask, export_type):
+
     if export_type == None or export_type == "BNW": 
+
         for i in range(l):
             for j in range(b):
+
                 if (i, j) in mask:
                     print('#', end='')
                 else: 
@@ -30,17 +33,13 @@ def grid_mask_print(arr, l, b, mask, export_type):
 
             print('')
 
-    return
-
-# Print result based on a coloured grid
-def grid_coloured_print(arr, l, b, mask, export_type):
-    if export_type == None or export_type == "BNW": 
+    elif export_type == "grid_coloured_print": 
+        
         for i in range(l):
             for j in range(b):
+
                 if (i, j) in mask:
-                    # print('\033[31m' +  + '\033[30m')
-                    print('\033[0;31;40m' + arr[i][j] + '\033[0;37;40m', end='')
-                    # print(f"\033[1;31;40m{arr[i][j]}\n", end='')
+                    print(Fore.RED + str(arr[i][j]) + Style.RESET_ALL, end='')
                 else: 
                     print(arr[i][j], end='')
 
