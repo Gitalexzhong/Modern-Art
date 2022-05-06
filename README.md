@@ -26,6 +26,12 @@
 - Weight output
 - Multi dimensionality graphs 
 
+## Algorithm planed
+
+- [X] Brute force - combinatorics
+- [ ] Brute force - Combinatorics, max value based
+- [ ] Bidirectional - max value based 
+
 # Sample Outputs 
 
 Inputted 5x5 grid with 10 select values will be 
