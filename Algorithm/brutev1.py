@@ -10,8 +10,11 @@ def solve(l, b, arr, quota):
     comb = list(itertools.combinations(cords, quota))
 
     m = 0
-    for test in comb:
+    no = 1
 
+    for test in comb:
+        no += 1
+        print(no)
         if wrapped_tester(test):
             s = 0 
             for i, j in test:
