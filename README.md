@@ -1,4 +1,4 @@
-# Modern Art
+# Modern Art ## V1.1
  Personal project based on the Modern-Art question in IMCxCSESoc 2022 competition 
 
 
