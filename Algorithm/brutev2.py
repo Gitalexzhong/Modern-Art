@@ -14,12 +14,9 @@ def solve(l, b, arr, quota):
     cords = [(aq, ab) for aq in range(l) for ab in range(b)]
 
     max_score = 0
-    # no_ops = 1
     timestart = time.time()
     
     for test in itertools.combinations(cords, quota):
-        # no_ops += 1
-        # print(no_ops)
 
         if timestart - time.time() > 300:
             break
