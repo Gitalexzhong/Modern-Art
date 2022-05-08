@@ -5,7 +5,6 @@
 import itertools
 import math
 from utility import wrapped_tester
-from math import comb
 import time
 
 def solve(l, b, arr, quota):
@@ -18,7 +17,7 @@ def solve(l, b, arr, quota):
     
     for test in itertools.combinations(cords, quota):
 
-        if timestart - time.time() > 300:
+        if (time.time() - timestart) > 180:
             break
 
         if wrapped_tester(test):
