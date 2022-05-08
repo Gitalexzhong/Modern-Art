@@ -1,11 +1,12 @@
-# Combinatorics based brute force solver with limitions of up to 10k loops 
-# This is due to a time limitation 
+# Combinatorics based brute force solver with limitions of up to 3 mins  
+# This is due to a time limitation and loops not working with shorter computes 
 # Has basic non valid grid checker
 
 import itertools
 import math
 from utility import wrapped_tester
 from math import comb
+import time
 
 def solve(l, b, arr, quota):
     print("Algo: Brute 2.0")
@@ -13,13 +14,14 @@ def solve(l, b, arr, quota):
     cords = [(aq, ab) for aq in range(l) for ab in range(b)]
 
     max_score = 0
-    no_ops = 1
+    # no_ops = 1
+    timestart = time.time()
     
     for test in itertools.combinations(cords, quota):
-        no_ops += 1
-        print(no_ops)
+        # no_ops += 1
+        # print(no_ops)
 
-        if no_ops == 1000000:
+        if timestart - time.time() > 300:
             break
 
         if wrapped_tester(test):
