@@ -13,6 +13,6 @@ def paint(fname, solve_method = None, export_type = None):
 if __name__ == "__main__":
     
     start = time.time()
-    # paint("sample10_1", "random_combv1", "grid_coloured_print")
-    paint("sample100_1", "brutev2", "grid_coloured_print")
+    paint("sample10_1", "random_combv1", "grid_coloured_print")
+    # paint("sample100_1", "brutev2", "grid_coloured_print")
     print(f"Seconds: {time.time() - start}")

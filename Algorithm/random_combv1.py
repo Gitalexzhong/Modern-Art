@@ -14,11 +14,14 @@ def solve(l, b, arr, quota):
     cords = [(aq, ab) for aq in range(l) for ab in range(b)]
 
     max_score = 0
+    output_map = ()
+    weighted_score = -1
     
     # print(random_combination(cords, quota))
-    for i in range(1000):
+    for iterC in range(100000):
         test = random_combination(cords, quota)
-        print(i)
+        # print(test)
+        print(iterC)
 
         if wrapped_tester(test):
             score = 0 
@@ -33,7 +36,7 @@ def solve(l, b, arr, quota):
                 output_map = test
         
     return output_map, weighted_score
-    return ((1,1), (1,2), (1,3), (1,4)), 5
+
 
 def random_combination(iterable, r):
     "Random selection from itertools.combinations(iterable, r)"
