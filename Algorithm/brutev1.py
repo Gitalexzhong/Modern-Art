@@ -1,3 +1,6 @@
+# Combinatorics based brute force solver 
+# Is memory limited and has basic non valid grid checker
+
 import itertools
 import math
 from utility import wrapped_tester
@@ -9,21 +12,18 @@ def solve(l, b, arr, quota):
 
     comb = list(itertools.combinations(cords, quota))
 
-    m = 0
-    no = 1
+    max_score = 0
 
     for test in comb:
-        no += 1
-        print(no)
         if wrapped_tester(test):
-            s = 0 
+            score = 0 
             for i, j in test:
-                s += int(arr[i][j])
+                score += int(arr[i][j])
 
-            sa = round(min(1, math.exp(0.0015*(s-7500)))*100,10)
+            weighted_score = round(min(1, math.exp(0.0015*(score-7500)))*100,10)
             
-            if sa > m:
-                m = sa
-                out = test
+            if weighted_score > max_score:
+                max_score = weighted_score
+                output_map = test
             
-    return out, sa
+    return output_map, weighted_score

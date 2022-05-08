@@ -25,10 +25,13 @@
 - Animated states
 - Weight output
 - Multi dimensionality graphs 
+- Optimizer for input system and solving runner
 
 ## Algorithm planed
 
 - [X] Brute force - combinatorics
+  - Contains: 
+    - Basic map checker 
 - [ ] Brute force - Combinatorics, max value based
 - [ ] Bidirectional - max value based 
 
