@@ -29,10 +29,26 @@
 
 ## Algorithm planed
 
-- [X] Brute force - combinatorics
+- [X] Brute force 1.0 - combinatorics
   - Contains: 
     - Basic map checker 
+
+- [X] Brute force 2.0 - combinatorics, mem efficient 
+  - Contains: 
+    - Basic map checker 
+    - Generates only one comb case per loop
+    - Basic time based auto stop (3 mins)
+
 - [ ] Brute force - Combinatorics, max value based
+  - Contains
+
+- [X] Randomized Combinatorics - Combinatorics random based
+  - Contains
+    - Basic map checker 
+    - Generates only one comb case per loop
+    - Randomized combinatorics generator
+    - Error output, 10000 combinatorics max
+
 - [ ] Bidirectional - max value based 
 
 # Sample Outputs 
