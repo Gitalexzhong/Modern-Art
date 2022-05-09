@@ -19,7 +19,7 @@ def solve(l, b, arr, quota):
     
     # print(random_combination(cords, quota))
     for iterC in range(100000):
-        test = random_combination(cords, quota)
+        test = list(random_combination(cords, quota))
         # print(test)
         print(iterC)
 

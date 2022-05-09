@@ -20,7 +20,7 @@ def solve(l, b, arr, quota):
         if (time.time() - timestart) > 180:
             break
 
-        if wrapped_tester(test):
+        if wrapped_tester(list(test)):
             score = 0 
 
             for i, j in test:
@@ -32,4 +32,4 @@ def solve(l, b, arr, quota):
                 max_score = weighted_score
                 output_map = test
         
-    return output_map, weighted_score
+    return list(output_map), weighted_score

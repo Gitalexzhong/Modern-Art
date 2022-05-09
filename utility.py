@@ -12,11 +12,23 @@ def import_map_2d(filename):
 
 # Function to check if each selection of cord are connected to another selection cord
 def wrapped_tester(cords):
-    for x, y in cords:
-        if len(set([(x-1, y), (x+1, y), (x, y-1), (x, y+1)]) & set(cords)) == 0:
-            return False
-    
-    return True
+    queue = [cords[0]]
+    cords.pop(0)
+    i = 0
+
+    while i < len(queue): 
+        x, y = queue[i]
+        for direction in [(x-1, y), (x+1, y), (x, y-1), (x, y+1)]:
+            if direction in cords:
+                queue.append(direction)
+                cords.remove(direction)
+        
+        queue.pop(0)
+
+    if len(cords) > 0:
+        return False
+    else: 
+        return True
 
 # Takes in a masked cords and outputs to stdout the masked area
 def grid_mask_print(arr, l, b, mask, score, export_type):
@@ -49,3 +61,6 @@ def grid_mask_print(arr, l, b, mask, score, export_type):
         print(f"Score: {score}")
 
     return
+
+if __name__ == '__main__':
+    print(wrapped_tester([(1,1),(1,2),(1,4),(1,5)]))

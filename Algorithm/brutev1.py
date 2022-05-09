@@ -15,7 +15,7 @@ def solve(l, b, arr, quota):
     max_score = 0
 
     for test in comb:
-        if wrapped_tester(test):
+        if wrapped_tester(list(test)):
             score = 0 
             for i, j in test:
                 score += int(arr[i][j])
@@ -26,4 +26,4 @@ def solve(l, b, arr, quota):
                 max_score = weighted_score
                 output_map = test
             
-    return output_map, weighted_score
+    return list(output_map), weighted_score
