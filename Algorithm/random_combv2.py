@@ -1,8 +1,10 @@
 # Combinatorics based random solver with at least one soloution
 # works better with larger grids
+# Has a max time limit of 10 mins 
 
 import math
 import random
+import time
 from utility import wrapped_tester
 
 def solve(l, b, arr, quota):
@@ -14,8 +16,9 @@ def solve(l, b, arr, quota):
     output_map = ()
     weighted_score = -1
     case = 1
-    
-    while weighted_score == -1:
+    timestart = time.time()
+
+    while weighted_score == -1 or (time.time() - timestart) < 600:
         print ("Tested cases = " + str(case), end="\r")
         test = random_combination(cords, quota)
 
