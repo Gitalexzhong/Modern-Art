@@ -1,12 +1,9 @@
 # Combinatorics based random solver 
 # Complete non optimal solver, runs for 10000 combinations 
 
-import importlib
-import itertools
 import math
 import random
 from utility import wrapped_tester
-from math import comb
 
 def solve(l, b, arr, quota):
     print("Algo: Rand Comb 1.0")
@@ -36,7 +33,6 @@ def solve(l, b, arr, quota):
 
 
 def random_combination(iterable, r):
-    # "Random selection from itertools.combinations(iterable, r)"
     pool = tuple(iterable)
     n = len(pool)
     indices = sorted(random.sample(range(n), r))
