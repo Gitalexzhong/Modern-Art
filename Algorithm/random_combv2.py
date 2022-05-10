@@ -1,4 +1,4 @@
-# Combinatorics based random solver 
+# Combinatorics based random solver with multicore processing 
 # Complete non optimal solver, runs for 10000 combinations 
 
 import importlib
@@ -7,9 +7,11 @@ import math
 import random
 from utility import wrapped_tester
 from math import comb
+import multiprocessing
+
 
 def solve(l, b, arr, quota):
-    print("Algo: Rand Comb 1.0")
+    print("Algo: Rand Comb 2.0")
 
     cords = [(aq, ab) for aq in range(l) for ab in range(b)]
 
@@ -17,11 +19,15 @@ def solve(l, b, arr, quota):
     output_map = ()
     weighted_score = -1
     
+    print(multiprocessing.cpu_count())
+
     for iterC in range(100000):
         test = random_combination(cords, quota)
 
         if wrapped_tester(list(test)):
             score = 0 
+
+            print(test)
 
             for i, j in test:
                 score += int(arr[i][j])
