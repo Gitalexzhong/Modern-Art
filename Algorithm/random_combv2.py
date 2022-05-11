@@ -3,9 +3,8 @@
 # Has a max time limit of 10 mins 
 
 import math
-import random
 import time
-from utility import wrapped_tester
+from utility import random_combination, wrapped_tester
 
 def solve(l, b, arr, quota):
     print("Algo: Rand Comb 2.0")
@@ -39,10 +38,3 @@ def solve(l, b, arr, quota):
         case += 1
         
     return output_map, weighted_score
-
-
-def random_combination(iterable, r):
-    pool = tuple(iterable)
-    n = len(pool)
-    indices = sorted(random.sample(range(n), r))
-    return tuple(pool[i] for i in indices)

@@ -1,4 +1,5 @@
 # Utility function for the painter function  
+import random
 from colorama import Fore, Style
 
 # Inputs a filename and return a array of values, the length, breadth and size of map to make
@@ -61,5 +62,12 @@ def grid_mask_print(arr, l, b, mask, score, export_type):
 
     return
 
+# Custom code to generate random combinatorics of cords
+def random_combination(iterable, r):
+    pool = tuple(iterable)
+    n = len(pool)
+    indices = sorted(random.sample(range(n), r))
+    return tuple(pool[i] for i in indices)
+    
 if __name__ == '__main__':
     print(wrapped_tester([(1,1),(1,2),(1,4),(1,5)]))

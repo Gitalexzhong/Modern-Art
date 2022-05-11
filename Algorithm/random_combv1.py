@@ -2,8 +2,7 @@
 # Complete non optimal solver, runs for 10000 combinations 
 
 import math
-import random
-from utility import wrapped_tester
+from utility import random_combination, wrapped_tester
 
 def solve(l, b, arr, quota):
     print("Algo: Rand Comb 1.0")
@@ -30,10 +29,3 @@ def solve(l, b, arr, quota):
                 output_map = test
         
     return output_map, weighted_score
-
-
-def random_combination(iterable, r):
-    pool = tuple(iterable)
-    n = len(pool)
-    indices = sorted(random.sample(range(n), r))
-    return tuple(pool[i] for i in indices)
