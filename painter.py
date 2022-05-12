@@ -15,4 +15,7 @@ def paint():
 
     grid_mask_print(arr, l, b, mask, score, output_name)
 
-paint()
+if __name__ == "__main__":
+    start_time = time.time()
+    paint()
+    print("Seconds: " + str(time.time() - start_time))
