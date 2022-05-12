@@ -69,5 +69,13 @@ def random_combination(iterable, r):
     indices = sorted(random.sample(range(n), r))
     return tuple(pool[i] for i in indices)
     
+def generate_grid(size, quota):
+    print(size, size, quota)
+    for i in range(size):
+        for j in range(size):
+            print(random.randint(0,9), end='')
+        print()
+
 if __name__ == '__main__':
-    print(wrapped_tester([(1,1),(1,2),(1,4),(1,5)]))
+    # print(wrapped_tester([(1,1),(1,2),(1,4),(1,5)]))
+    generate_grid(10, 15)
