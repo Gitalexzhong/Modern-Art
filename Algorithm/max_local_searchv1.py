@@ -12,13 +12,33 @@ def solve(l, b, arr, quota):
     visitedMap = []
     pq = {}
 
+    # get max values list 
     for i in range(l):
         for j in range(b):
             if arr[i][j] == max_value:
                 listCordsMax.append((i, j))
 
-    returnListCords.append(random.choice(listCordsMax))
-    print(random.choice(listCordsMax))
-    print(returnListCords)
+    chosenStart = random.choice(listCordsMax)
+    returnListCords.append(chosenStart)
+    visitedMap.append(chosenStart)
+
+    testCord = chosenStart
+    # print(random.choice(listCordsMax))
+    # print(returnListCords)
+
+    print(visitedMap)
+    print(testCord[0], testCord[1])
+    x, y = testCord
+    for a, b in [(x-1, y), (x+1, y), (x, y-1), (x, y+1)]:
+    #     # if direction in cords:
+    #         # queue.append(direction)
+    #         # cords.remove(direction)
+        if a in range(0, l) and b in range(0, b):
+
+            print(a, b)
+
+
+    # pq[(1,1)] = 5
+    # print(pq)
 
     return returnListCords, -1
