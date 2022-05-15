@@ -46,6 +46,7 @@ def solve(height, length, arr, quota):
                 pq[arr[a][b]] = [(a,b)]
         
     print(pq)
+    print(max(pq.keys()))
 
 
     # pq[(1,1)] = 5
