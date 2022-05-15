@@ -5,11 +5,11 @@ from colorama import Fore, Style
 # Inputs a filename and return a array of values, the length, breadth and size of map to make
 def import_map_2d(filename):
     f = open(f"Maps/{filename}", "r")
-    l, b, quota = f.readline().split(' ')
+    v, h, quota = f.readline().split(' ')
 
     arr = [[char for char in line] for line in f.read().splitlines()]
-
-    return int(l), int(b), int(quota), arr
+    print(arr)
+    return int(v), int(h), int(quota), arr
 
 # Function to check if each selection of cord are connected to another selection cord, implements a queue system
 def wrapped_tester(cords):
