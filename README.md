@@ -49,6 +49,12 @@
     - Randomized combinatorics generator
     - Error output, 10000 combinatorics max
 
+- [X] Max based Local Search - local search algorithm
+  - Contains
+    - PQ system based
+    - Start on a max value 
+    - Complete, Not optimal
+
 - [ ] Bidirectional - max value based 
 
 # Sample Outputs 
