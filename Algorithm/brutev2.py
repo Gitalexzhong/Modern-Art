@@ -25,11 +25,9 @@ def solve(l, b, arr, quota):
 
             for i, j in test:
                 score += int(arr[i][j])
-
-            weighted_score = round(min(1, math.exp(0.0015*(score-7500)))*100,10)
             
-            if weighted_score > max_score:
-                max_score = weighted_score
+            if score > max_score:
+                max_score = score
                 output_map = test
         
-    return list(output_map), weighted_score
+    return list(output_map), score
