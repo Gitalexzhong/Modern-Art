@@ -58,7 +58,7 @@ def grid_mask_print(arr, l, b, mask, score, export_type):
 
             print('')
         
-    weighted_score = round(min(1, math.exp(0.0015*(score-7500)))*100,10)
+    weighted_score = round(min(1, math.exp(0.0015*(score-7500)))*10,10)
     print(f"Score: {score}")
     print(f"Weighted Score: {weighted_score}")
 
