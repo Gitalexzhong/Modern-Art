@@ -1,6 +1,7 @@
 # Utility function for the painter function  
 import random
 from colorama import Fore, Style
+import math
 
 # Inputs a filename and return a array of values, the length, breadth and size of map to make
 def import_map_2d(filename):
@@ -44,7 +45,6 @@ def grid_mask_print(arr, l, b, mask, score, export_type):
                     print('.', end='')
 
             print('')
-        print(f"Score: {score}")
 
     elif export_type == "grid_coloured_print": 
         
@@ -58,7 +58,9 @@ def grid_mask_print(arr, l, b, mask, score, export_type):
 
             print('')
         
-        print(f"Score: {score}")
+    weighted_score = round(min(1, math.exp(0.0015*(score-7500)))*100,10)
+    print(f"Score: {score}")
+    print(f"Weighted Score: {weighted_score}")
 
     return
 
