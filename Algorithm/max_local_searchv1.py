@@ -35,8 +35,8 @@ def solve(height, length, arr, quota):
 
     for _ in range(quota - 1):
         maxKey = max(pq.keys())
-
         newSelected = random.choice(pq[maxKey])
+        
         visitedMap[newSelected] = True
         pq[maxKey].remove(newSelected)
         if pq[maxKey] == []:
