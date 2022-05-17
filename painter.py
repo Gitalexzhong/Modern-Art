@@ -9,7 +9,7 @@ output_name = sys.argv[3]
 
 def paint():
     size_v, size_h, quota, arr = import_map_2d(map_name)
-
+    
     algo = importlib.import_module("algorithm." + algo_name)
     mask, score = algo.solve(size_v, size_h, arr, quota)
 

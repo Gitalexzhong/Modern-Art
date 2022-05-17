@@ -9,7 +9,7 @@ def import_map_2d(filename):
     v, h, quota = f.readline().split(' ')
 
     arr = [[char for char in line] for line in f.read().splitlines()]
-    print(arr)
+
     return int(v), int(h), int(quota), arr
 
 # Function to check if each selection of cord are connected to another selection cord, implements a queue system
