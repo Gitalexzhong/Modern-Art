@@ -1,4 +1,5 @@
 # Local search based on select a max value first
+# Compeared to V1, searches will be based on a nearby utility value
 
 import math
 import random
