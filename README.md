@@ -1,4 +1,4 @@
-# Modern Art
+# Modern Art ## V1.1
  Personal project based on the Modern-Art question in IMCxCSESoc 2022 competition 
 
 
@@ -25,11 +25,36 @@
 - Animated states
 - Weight output
 - Multi dimensionality graphs 
+- Optimizer for input system and solving runner
 
 ## Algorithm planed
 
-- [X] Brute force - combinatorics
+- [X] Brute force 1.0 - combinatorics
+  - Contains: 
+    - Basic map checker 
+
+- [X] Brute force 2.0 - combinatorics, mem efficient 
+  - Contains: 
+    - Basic map checker 
+    - Generates only one comb case per loop
+    - Basic time based auto stop (3 mins)
+
 - [ ] Brute force - Combinatorics, max value based
+  - Contains
+
+- [X] Randomized Combinatorics - Combinatorics random based
+  - Contains
+    - Basic map checker 
+    - Generates only one comb case per loop
+    - Randomized combinatorics generator
+    - Error output, 10000 combinatorics max
+
+- [X] Max based Local Search - local search algorithm
+  - Contains
+    - PQ system based
+    - Start on a max value 
+    - Complete, Not optimal
+
 - [ ] Bidirectional - max value based 
 
 # Sample Outputs 

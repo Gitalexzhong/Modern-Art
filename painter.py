@@ -1,17 +1,21 @@
 import importlib
+import sys
 import time
 from utility import grid_mask_print, import_map_2d
 
-def paint(fname, solve_method = None, export_type = None):
-    l, b, quota, arr = import_map_2d(fname)
+map_name = sys.argv[1]
+algo_name = sys.argv[2]
+output_name = sys.argv[3]
 
-    algo = importlib.import_module("algorithm." + solve_method)
-    mask, score = algo.solve(l, b, arr, quota)
+def paint():
+    size_v, size_h, quota, arr = import_map_2d(map_name)
+    
+    algo = importlib.import_module("algorithm." + algo_name)
+    mask, score = algo.solve(size_v, size_h, arr, quota)
 
-    grid_mask_print(arr, l, b, mask, score, export_type)
+    grid_mask_print(arr, size_v, size_h, mask, score, output_name)
 
 if __name__ == "__main__":
-    
-    start = time.time()
-    paint("sample10_1", "brutev1", "grid_coloured_print")
-    print(f"Seconds: {time.time() - start}")
+    start_time = time.time()
+    paint()
+    print("Seconds: " + str(time.time() - start_time))
