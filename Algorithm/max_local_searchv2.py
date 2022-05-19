@@ -9,19 +9,24 @@ from utility import random_combination, wrapped_tester
 def solve(height, length, arr, quota):
     
     max_value = max([max(val) for val in arr])
-    listCordsMax = [];
-
-    visitedMap = {}
-    pq = {}
-    score = 0
+    bestScore = 0
+    bestMap = None
 
     # get max values list 
     for i in range(height):
         for j in range(length):
             if arr[i][j] == max_value:
-                listCordsMax.append((i, j))
+                visitedMap, score = solve_local_based(height, length, arr, quota, (i, j))
+                if score > bestScore:
+                    bestMap, bestScore = visitedMap, score
 
-    chosenStart = random.choice(listCordsMax)
+    return bestMap, bestScore
+
+def solve_local_based(height, length, arr, quota, chosenStart):
+    visitedMap = {}
+    pq = {}
+    score = 0
+
     visitedMap[chosenStart] = True
 
     pq = check_visited(height, length, chosenStart, pq, visitedMap, arr)
@@ -40,6 +45,7 @@ def solve(height, length, arr, quota):
         pq = check_visited(height, length, newSelected, pq, visitedMap, arr)
 
     return visitedMap, score
+
 
 def check_visited(height, length, chosen, pq, visitedMap, arr):
     x, y = chosen
