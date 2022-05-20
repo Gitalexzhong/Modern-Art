@@ -23,11 +23,10 @@ def solve(height, length, arr, quota):
     return bestMap, bestScore
 
 def solve_local_based(height, length, arr, quota, chosenStart):
-    visitedMap = {}
-    pq = {}
-    score = 0
-
     visitedMap[chosenStart] = True
+    
+    visitedMap, pq = {}, {}
+    score = 0
 
     pq = check_visited(height, length, chosenStart, pq, visitedMap, arr)
 
