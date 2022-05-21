@@ -55,6 +55,13 @@
     - Start on a max value 
     - Complete, Not optimal
 
+- [X] Max based Local Search 2.0 - local search algorithm
+  - Contains
+    - PQ system based
+    - Start on a max value 
+    - Complete, Not optimal
+    - Runs multiple times for every max start node 
+  
 - [ ] Bidirectional - max value based 
 
 # Sample Outputs 
