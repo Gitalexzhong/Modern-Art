@@ -13,7 +13,7 @@ def paint():
     algo = importlib.import_module("algorithm." + algo_name)
     mask, score = algo.solve(size_v, size_h, arr, quota)
 
-    grid_mask_print(arr, size_v, size_h, mask, score, output_name)
+    grid_mask_print(arr, size_v, size_h, mask, score, output_name, quota)
 
 if __name__ == "__main__":
     start_time = time.time()

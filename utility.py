@@ -2,6 +2,7 @@
 import random
 from colorama import Fore, Style
 import math
+import numpy as np
 
 # Inputs a filename and return a array of values, the length, breadth and size of map to make
 def import_map_2d(filename):
@@ -33,7 +34,7 @@ def wrapped_tester(cords):
         return True
 
 # Takes in a masked cords and outputs to stdout the masked area
-def grid_mask_print(arr, l, b, mask, score, export_type):
+def grid_mask_print(arr, l, b, mask, score, export_type, quota):
     if export_type == None or export_type == "BNW": 
 
         for i in range(l):
@@ -61,7 +62,8 @@ def grid_mask_print(arr, l, b, mask, score, export_type):
     weighted_score = round(min(1, math.exp(0.0015*(score-7500)))*10,10)
     print(f"Score: {score}")
     print(f"Weighted Score: {weighted_score}")
-
+    
+    print(f"Weighted Score: {get_weighed_max_score(arr, quota)}")
     return
 
 # Custom code to generate random combinatorics of cords
@@ -77,6 +79,15 @@ def generate_grid(size, quota):
         for j in range(size):
             print(random.randint(0,9), end='')
         print()
+
+def get_weighed_max_score(arr, quota): 
+    flatArr = np.array(arr).flatten()
+    print(np.sort(flatArr))
+    flatArr[::-1].sort()
+    b = flatArr[:quota]
+    v=np.sum(b)
+    print(v)
+    return 1
 
 if __name__ == '__main__':
     # print(wrapped_tester([(1,1),(1,2),(1,4),(1,5)]))
