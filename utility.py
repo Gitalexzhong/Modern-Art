@@ -58,12 +58,9 @@ def grid_mask_print(arr, l, b, mask, score, export_type, quota):
                     print(arr[i][j], end='')
 
             print('')
-        
-    weighted_score = round(min(1, math.exp(0.0015*(score-7500)))*10,10)
+
     print(f"Score: {score}")
-    print(f"Weighted Score: {weighted_score}")
-    
-    print(f"Weighted Score: {get_weighed_max_score(arr, quota)}")
+    print(f"Weighted Score: {get_weighed_max_score(score, arr, quota)}%")
     return
 
 # Custom code to generate random combinatorics of cords
@@ -80,14 +77,11 @@ def generate_grid(size, quota):
             print(random.randint(0,9), end='')
         print()
 
-def get_weighed_max_score(arr, quota): 
-    flatArr = np.array(arr).flatten()
-    print(np.sort(flatArr))
-    flatArr[::-1].sort()
-    b = flatArr[:quota]
-    v=np.sum(b)
-    print(v)
-    return 1
+def get_weighed_max_score(score, arr, quota): 
+    flatArr = np.array(arr, int).flatten()
+    flatArr.sort()
+    totalMaxScore = np.sum(flatArr[-quota:])
+    return round(score*100/totalMaxScore, 8)
 
 if __name__ == '__main__':
     # print(wrapped_tester([(1,1),(1,2),(1,4),(1,5)]))
