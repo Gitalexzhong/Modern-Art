@@ -29,7 +29,7 @@ def solve_local_based(height, length, arr, quota, chosenStart):
 
     pq = check_visited(height, length, chosenStart, pq, visitedMap, arr)
 
-    for _ in range(quota - 1):
+    for i in range(quota - 1):
         maxKey = max(pq.keys())
         newSelected = random.choice(pq[maxKey])
         
@@ -42,6 +42,7 @@ def solve_local_based(height, length, arr, quota, chosenStart):
 
         pq = check_visited(height, length, newSelected, pq, visitedMap, arr)
 
+        print(i)
     return visitedMap, score
 
 
