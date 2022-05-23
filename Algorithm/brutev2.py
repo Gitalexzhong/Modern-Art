@@ -29,5 +29,5 @@ def solve(l, b, arr, quota):
             if score > max_score:
                 max_score = score
                 output_map = test
-        
-    return list(output_map), score
+
+    return list(output_map), max_score
