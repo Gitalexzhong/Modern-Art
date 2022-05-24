@@ -15,17 +15,17 @@ def get_distribution(arr):
     l = {}
 
     for i in arr: 
-        for j in arr: 
+        for j in i: 
             if j in l: 
                 l[j] += 1
             else:
                 l[j] = 1
 
-    return l
+    return {k: v for k, v in sorted(l.items(), key=lambda item: item[1])}
 
 
 if __name__ == '__main__':
     # print(wrapped_tester([(1,1),(1,2),(1,4),(1,5)]))
     # generate_grid(10, 15)
     size_v, size_h, quota, arr = import_map_2d("sample1000_1")
-    print(get_distribution())
+    print(get_distribution(arr))
