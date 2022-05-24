@@ -7,7 +7,7 @@ from re import M
 from utility import random_combination, wrapped_tester, grid_mask_print
 
 def solve(height, length, arr, quota):
-    
+    print("Algo: Max Local Search 2.0")
     max_value = max([max(val) for val in arr])
     bestScore = 0
     bestMap = None

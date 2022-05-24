@@ -6,7 +6,7 @@ from re import M
 from utility import random_combination, wrapped_tester
 
 def solve(height, length, arr, quota):
-    
+    print("Algo: Max Local Search 1.0")
     max_value = max([max(val) for val in arr])
     listCordsMax = [];
 
