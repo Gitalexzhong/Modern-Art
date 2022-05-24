@@ -69,13 +69,6 @@ def random_combination(iterable, r):
     n = len(pool)
     indices = sorted(random.sample(range(n), r))
     return tuple(pool[i] for i in indices)
-    
-def generate_grid(size, quota):
-    print(size, size, quota)
-    for i in range(size):
-        for j in range(size):
-            print(random.randint(0,9), end='')
-        print()
 
 def get_weighed_max_score(score, arr, quota): 
     flatArr = np.array(arr, int).flatten()
@@ -84,5 +77,5 @@ def get_weighed_max_score(score, arr, quota):
     return round(score*100/totalMaxScore, 8)
 
 if __name__ == '__main__':
-    # print(wrapped_tester([(1,1),(1,2),(1,4),(1,5)]))
-    generate_grid(10, 15)
+    print(wrapped_tester([(1,1),(1,2),(1,4),(1,5)]))
+    
