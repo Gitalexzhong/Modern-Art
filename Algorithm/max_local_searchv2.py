@@ -27,15 +27,10 @@ def solve(height, length, arr, quota):
 def solve_local_based(height, length, arr, quota, chosenStart):
     visitedMap, pq = {}, {}
     visitedMap[chosenStart] = 1
-    score = 0
-    # print(chosenStart)
-    # print(visitedMap)
+    score = int(arr[chosenStart[0]][chosenStart[1]])
+
     pq = check_visited(height, length, chosenStart, pq, visitedMap, arr)
 
-    print(pq)
-    print(visitedMap)
-    grid_mask_print(arr, length, height, visitedMap, -1, "grid_coloured_print", quota)
-    print()
     for i in range(quota - 1):
         
         maxKey = max(pq.keys())
@@ -47,26 +42,16 @@ def solve_local_based(height, length, arr, quota, chosenStart):
             del pq[maxKey]
 
         score += int(maxKey)
-        # print(maxKey)
 
         pq = check_visited(height, length, newSelected, pq, visitedMap, arr)
-        print(pq)
-        print(visitedMap)
-        grid_mask_print(arr, length, height, visitedMap, -1, "grid_coloured_print", quota)
-        print()
 
-    #     print(i)
-    # print(visitedMap)
     return visitedMap, score
 
 
 def check_visited(height, length, chosen, pq, visitedMap, arr):
     x, y = chosen
-    print(chosen)
     for a, b in [(x-1, y), (x+1, y), (x, y-1), (x, y+1)]:     
-        print("asd: " + str(a) + " " + str(b)) 
         if a in range(0, height) and b in range(0, length) and (a, b) not in visitedMap and (arr[a][b] not in pq or (a, b) not in pq[arr[a][b]]):
-            print("input")
             if arr[a][b] in pq:
                 pq[arr[a][b]].append((a, b))
             else: 
