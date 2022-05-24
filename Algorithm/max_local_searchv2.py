@@ -16,8 +16,6 @@ def solve(height, length, arr, quota):
     for i in range(height):
         for j in range(length):
             if arr[i][j] == max_value:
-                return solve_local_based(height, length, arr, quota, (i, j))
-
                 visitedMap, score = solve_local_based(height, length, arr, quota, (i, j))
                 if score > bestScore:
                     bestMap, bestScore = visitedMap, score
