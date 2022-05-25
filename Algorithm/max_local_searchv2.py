@@ -1,10 +1,7 @@
 # Local search based on select a max value first
 # Compared to V1, searches will be based on a nearby utility value
 
-import math
 import random
-from re import M
-from utility import random_combination, wrapped_tester, grid_mask_print
 
 def solve(height, length, arr, quota):
     print("Algo: Max Local Search 2.0")

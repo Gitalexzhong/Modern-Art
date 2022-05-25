@@ -1,9 +1,6 @@
 # Local search based on select a max value first
 
-import math
 import random
-from re import M
-from utility import random_combination, wrapped_tester
 
 def solve(height, length, arr, quota):
     print("Algo: Max Local Search 1.0")
