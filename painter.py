@@ -1,13 +1,14 @@
 import importlib
 import sys
 import time
-from utility import grid_mask_print, import_map_2d
+from output import grid_mask_print
+from utility import import_map_2d
 
 map_name = sys.argv[1]
 algo_name = sys.argv[2]
 output_name = sys.argv[3]
 
-def paint():
+def main():
     size_v, size_h, quota, arr = import_map_2d(map_name)
     
     algo = importlib.import_module("algorithm." + algo_name)
@@ -17,5 +18,5 @@ def paint():
 
 if __name__ == "__main__":
     start_time = time.time()
-    paint()
+    main()
     print("Seconds: " + str(time.time() - start_time))
