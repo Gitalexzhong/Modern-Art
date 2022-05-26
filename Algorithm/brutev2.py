@@ -3,7 +3,6 @@
 # Has basic non valid grid checker
 
 import itertools
-import math
 from utility import wrapped_tester
 import time
 
