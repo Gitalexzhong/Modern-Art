@@ -42,7 +42,6 @@ def solve_local_based(height, length, arr, quota, chosenStart):
 
     return visitedMap, score
 
-
 def check_visited(height, length, chosen, pq, visitedMap, arr):
     x, y = chosen
     for a, b in [(x-1, y), (x+1, y), (x, y-1), (x, y+1)]:     
