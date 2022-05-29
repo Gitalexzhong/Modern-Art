@@ -2,18 +2,16 @@
 # Compared to V1, searches will be based on a nearby utility value
 
 from math import sqrt
+import math
 import operator
 import random
 
-incremental_step_value = 2
+incremental_step_value = 1
 
 def solve(height, length, arr, quota):
     print("Algo: Max Local Search 3.0")
     max_value = max([max(val) for val in arr])
     dict_max = {}
-    # dict_max = {(1, 1): 0, (2, 2): 0}
-    # bestScore = 0
-    # bestMap = None
 
     # get max values list 
     for i in range(height):
@@ -21,9 +19,7 @@ def solve(height, length, arr, quota):
             if arr[i][j] == max_value:
                 dict_max[(i,j)] = 0
 
-    # print(dict_max)
-    chosen_node = best_node_chooser(arr, dict_max)
-    # return [(1,1)], -1
+    chosen_node = best_node_chooser(arr, dict_max, min(height, length, int(math.sqrt(quota))))
     return solve_local_based(height, length, arr, quota, chosen_node)
 
 
@@ -37,7 +33,7 @@ def solve_local_based(height, length, arr, quota, chosenStart):
     for i in range(quota - 1):
         
         maxKey = max(pq.keys())
-        newSelected = best_node_chooser(arr, convert_dict_zero(pq[maxKey]))
+        newSelected = best_node_chooser(arr, convert_dict_zero(pq[maxKey]), int(math.sqrt(i)))
         
         visitedMap[newSelected] = i + 2
         pq[maxKey].remove(newSelected)
@@ -70,8 +66,8 @@ def convert_dict_zero(l):
     return d
     
 
-def best_node_chooser(arr, node_list, step_val = incremental_step_value): 
-    max_range = step_val
+def best_node_chooser(arr, node_list, start_val_step = incremental_step_value, step_val = incremental_step_value): 
+    max_range = start_val_step
 
     while (1):
         for x, y in node_list:
@@ -83,11 +79,11 @@ def best_node_chooser(arr, node_list, step_val = incremental_step_value):
 
         max_item_val = max(node_list.values())
         list_max = [key for key in node_list if node_list[key] == max_item_val]
-
+    
         if len(list_max) == 1:
-            # print(list_max[0], max_item_val)
+            print(list_max[0], max_item_val)
             return list_max[0]
-        # print("pass")
+        print(max_range)
         max_range += step_val
 
         # TODO add a bypass system for overload 
