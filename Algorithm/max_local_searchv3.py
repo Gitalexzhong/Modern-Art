@@ -16,13 +16,13 @@ def solve(height, length, arr, quota):
     # bestMap = None
 
     # get max values list 
-    # for i in range(height):
-    #     for j in range(length):
-    #         if arr[i][j] == max_value:
-    #             dict_max[(i,j)] = 0
+    for i in range(height):
+        for j in range(length):
+            if arr[i][j] == max_value:
+                dict_max[(i,j)] = 0
 
     # print(dict_max)
-    chosen_node = best_node_chooser(arr, dict_max)
+    chosen_node = best_node_chooser(arr, dict_max, 3)
     # return [(1,1)], -1
     return solve_local_based(height, length, arr, quota, chosen_node)
 
@@ -61,8 +61,8 @@ def check_visited(height, length, chosen, pq, visitedMap, arr):
     
     return pq
 
-def best_node_chooser(arr, node_list): 
-    max_range = incremental_step_value
+def best_node_chooser(arr, node_list, step_val = incremental_step_value): 
+    max_range += step_val
 
     while (1):
         for x, y in node_list:
@@ -72,8 +72,6 @@ def best_node_chooser(arr, node_list):
                     if distance <= max_range: 
                         node_list[(x, y)] += int(arr[item_x][item_y])
 
-
-        node_list[(3,3)] = 26
         # a = max(node_list.items(), key=operator.itemgetter(1))
         # print(a)
         # print()
@@ -88,7 +86,7 @@ def best_node_chooser(arr, node_list):
             print(list_max[0], max_item_val)
             return list_max[0]
         # print("pass")
-        max_range += incremental_step_value
+        max_range += step_val
 
         # TODO add a bypass system for overload 
 
