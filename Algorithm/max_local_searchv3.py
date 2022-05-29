@@ -5,7 +5,7 @@ from math import sqrt
 import operator
 import random
 
-incremental_step_value = 1
+incremental_step_value = 2
 
 def solve(height, length, arr, quota):
     print("Algo: Max Local Search 3.0")
@@ -22,7 +22,7 @@ def solve(height, length, arr, quota):
                 dict_max[(i,j)] = 0
 
     # print(dict_max)
-    chosen_node = best_node_chooser(arr, dict_max, 3)
+    chosen_node = best_node_chooser(arr, dict_max)
     # return [(1,1)], -1
     return solve_local_based(height, length, arr, quota, chosen_node)
 
@@ -37,7 +37,7 @@ def solve_local_based(height, length, arr, quota, chosenStart):
     for i in range(quota - 1):
         
         maxKey = max(pq.keys())
-        newSelected = random.choice(pq[maxKey])
+        newSelected = best_node_chooser(arr, convert_dict_zero(pq[maxKey]))
         
         visitedMap[newSelected] = i + 2
         pq[maxKey].remove(newSelected)
@@ -61,8 +61,17 @@ def check_visited(height, length, chosen, pq, visitedMap, arr):
     
     return pq
 
+def convert_dict_zero(l):
+    d = {}
+
+    for item in l:
+        d[item] = 0
+
+    return d
+    
+
 def best_node_chooser(arr, node_list, step_val = incremental_step_value): 
-    max_range += step_val
+    max_range = step_val
 
     while (1):
         for x, y in node_list:
@@ -72,18 +81,11 @@ def best_node_chooser(arr, node_list, step_val = incremental_step_value):
                     if distance <= max_range: 
                         node_list[(x, y)] += int(arr[item_x][item_y])
 
-        # a = max(node_list.items(), key=operator.itemgetter(1))
-        # print(a)
-        # print()
-
         max_item_val = max(node_list.values())
         list_max = [key for key in node_list if node_list[key] == max_item_val]
-        # print(max_item_val)
-        # print(list_max)
-        # print(node_list)
 
         if len(list_max) == 1:
-            print(list_max[0], max_item_val)
+            # print(list_max[0], max_item_val)
             return list_max[0]
         # print("pass")
         max_range += step_val
