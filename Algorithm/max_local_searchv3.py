@@ -86,8 +86,6 @@ def best_node_chooser(arr, node_list, start_val_step = incremental_step_value, s
         print(max_range)
         max_range += step_val
 
-        # TODO add a bypass system for overload 
-
     return None
 
 if __name__ == '__main__': 
