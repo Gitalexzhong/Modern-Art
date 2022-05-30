@@ -41,3 +41,14 @@ def grid_coloured_print(length, height, arr, mask):
                 print(arr[i][j], end='')
 
         print('')
+
+def grid_coloured_print_heat(length, height, arr, mask):
+    for i in range(length):
+        for j in range(height):
+
+            if (i, j) in mask:
+                print(Fore.RED + str(arr[i][j]) + Style.RESET_ALL, end='')
+            else: 
+                print(arr[i][j], end='')
+
+        print('')
