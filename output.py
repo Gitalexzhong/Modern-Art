@@ -2,6 +2,7 @@
 
 from utility import get_min_max, get_weighed_max_score
 from colorama import Fore, Style
+from termcolor import colored
 
 # Takes in a masked cords and outputs to stdout the masked area
 def output_result(arr, length, height, mask, score, export_type, quota):
@@ -60,6 +61,9 @@ def grid_heat_print(length, height, arr, mask):
 
     #     print('')
     colors = [x for x in dir(Fore) if x[0] != "_"]
+    colors = [i for i in colors if i not in ["BLACK", "RESET"] and "LIGHT" not in i] 
+
     for color  in colors:
-        print(color + f"{color}")
+        print(colored(color, color.lower()))
+
 
