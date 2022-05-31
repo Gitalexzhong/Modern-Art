@@ -13,7 +13,7 @@
 
 # Usage
 ```
-python3 main {Map Name} {Algorithm Name} {Output Style}
+python3 main.py {Map Name} {Algorithm Name} {Output Style}
 ```
 
 # Current technologies planned
