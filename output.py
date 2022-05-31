@@ -9,6 +9,10 @@ def output_result(arr, length, height, mask, score, export_type, quota):
 
     if print_algo == "grid_coloured_print": 
         grid_coloured_print(length, height, arr, mask)
+        
+    elif print_algo == "grid_heat_print": 
+        grid_heat_print(length, height, arr, mask)
+
     else: 
         basic_print(length, height, mask)
 
