@@ -1,6 +1,6 @@
 # FIle for output code and graphs 
 
-from utility import get_weighed_max_score
+from utility import get_min_max, get_weighed_max_score
 from colorama import Fore, Style
 
 # Takes in a masked cords and outputs to stdout the masked area
@@ -9,7 +9,7 @@ def output_result(arr, length, height, mask, score, export_type, quota):
 
     if print_algo == "grid_coloured_print": 
         grid_coloured_print(length, height, arr, mask)
-        
+
     elif print_algo == "grid_heat_print": 
         grid_heat_print(length, height, arr, mask)
 
@@ -47,12 +47,19 @@ def grid_coloured_print(length, height, arr, mask):
         print('')
 
 def grid_heat_print(length, height, arr, mask):
-    for i in range(length):
-        for j in range(height):
+    minV, maxV = get_min_max(arr)
+    diff = maxV - minV
 
-            if (i, j) in mask:
-                print(Fore.RED + str(arr[i][j]) + Style.RESET_ALL, end='')
-            else: 
-                print(arr[i][j], end='')
+    # for i in range(length):
+    #     for j in range(height):
 
-        print('')
+    #         if (i, j) in mask:
+    #             print(Fore.RED + str(arr[i][j]) + Style.RESET_ALL, end='')
+    #         else: 
+    #             print(arr[i][j], end='')
+
+    #     print('')
+    colors = [x for x in dir(Fore) if x[0] != "_"]
+    for color  in colors:
+        print(color + f"{color}")
+
