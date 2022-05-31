@@ -42,7 +42,7 @@ def grid_coloured_print(length, height, arr, mask):
 
         print('')
 
-def grid_coloured_print_heat(length, height, arr, mask):
+def grid_heat_print(length, height, arr, mask):
     for i in range(length):
         for j in range(height):
 

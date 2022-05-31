@@ -11,6 +11,11 @@
  The goals of this challenge is the explore specific algorithms related to heat mapping and selection of values in a efficient manner. 
  It will also be a learning project to explore the use of full stack programming, including the use of API, frontend and backend implementations.
 
+# Usage
+```
+python3 main {Map Name} {Algorithm Name} {Output Style}
+```
+
 # Current technologies planned
 - [ ] Backend - Python
 - [ ] Frontend - Undecided 
