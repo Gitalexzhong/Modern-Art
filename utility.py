@@ -46,6 +46,20 @@ def get_weighed_max_score(score, arr, quota):
     totalMaxScore = np.sum(flatArr[-quota:])
     return round(score*100/totalMaxScore, 8)
 
+def get_min_max(arr): 
+    minV = 1000000
+    maxV = -1000000
+
+    for row in arr: 
+        for num in row: 
+            i = int(num)
+            if minV > i: 
+                minV = i
+            if maxV < i: 
+                maxV = i
+    
+    return minV, maxV
+
 if __name__ == '__main__':
     print(wrapped_tester([(1,1),(1,2),(1,4),(1,5)]))
     
