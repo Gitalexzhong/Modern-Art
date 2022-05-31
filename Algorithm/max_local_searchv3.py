@@ -81,9 +81,8 @@ def best_node_chooser(arr, node_list, start_val_step = incremental_step_value, s
         list_max = [key for key in node_list if node_list[key] == max_item_val]
     
         if len(list_max) == 1:
-            print(list_max[0], max_item_val)
             return list_max[0]
-        print(max_range)
+
         max_range += step_val
 
     return None
