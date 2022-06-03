@@ -1,11 +1,14 @@
 # File to access csv file and record results
 
-def record_result():
-    print("hi")
+import time
 
-    f = open("Maps/sample5_1", "r")
+def record_result(map_name, algo_name, output_name, total_time, score, weighted_score, Num_data):
 
-    print(f.read())
+    f = open("Results/data-results.csv", "a")
+
+    f.write(f"\n{time.ctime()},{map_name},{algo_name},{output_name},{total_time},{score},{weighted_score},{Num_data};")
+
+    f.close()
 
 if __name__ == "__main__":
     record_result()
