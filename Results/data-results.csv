@@ -1,1 +1,2 @@
-Date,Map Name,Algorthum,Output system,Time ,Score,Weighted Score,Time 
+Date,Map Name,Algorthum,Output system,Run Time (Sec),Score,Weighted Score (%),Number of Elements;
+Fri Jun  3 23:13:47 2022,sample5_1,max_local_searchv1,grid_heat_print,0.0015740394592285156,58,79.45205479,25;
