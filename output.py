@@ -17,13 +17,14 @@ def output_result(arr, length, height, mask, score, export_type, quota):
     else: 
         basic_print(length, height, mask)
 
-    print_scores(score, arr, quota)
-
-    return
+    return print_scores(score, arr, quota)
 
 def print_scores(score, arr, quota):
+    weighted_score = get_weighed_max_score(score, arr, quota)
     print(f"Score: {score}")
-    print(f"Weighted Score: {get_weighed_max_score(score, arr, quota)}%")
+    print(f"Weighted Score: {weighted_score}%")
+
+    return weighted_score
 
 def basic_print(length, height, mask):
     for i in range(length):
