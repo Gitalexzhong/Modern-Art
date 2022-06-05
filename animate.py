@@ -14,12 +14,3 @@ def grid_heat_print(length, height, arr, mask):
                 print(arr[i][j], end='')
 
         print('')
-
-def rgb(minimum, maximum, value):
-    minimum, maximum = float(minimum), float(maximum)
-    ratio = 2 * (value-minimum) / (maximum - minimum)
-    b = int(max(0, 255*(1 - ratio)))
-    r = int(max(0, 255*(ratio - 1)))
-    g = 255 - b - r
-
-    return r, g, b
