@@ -5,3 +5,6 @@ Fri Jun  3 23:16:48 2022,sample5_1,max_local_searchv3,grid_heat_print,0.00191426
 Fri Jun  3 23:17:58 2022,sample100_1,max_local_searchv3,grid_heat_print,62.547605991363525,6787,75.41111111,10000;
 Sat Jun  4 22:50:47 2022,sample5_1,brutev2,grid_heat_print,6.8955748081207275,70,95.89041096,25;
 Sat Jun  4 22:52:00 2022,sample10_1,brutev2,grid_heat_print,56.685548067092896,41,91.11111111,100;
+Sun Jun  5 20:17:22 2022,sample5_1,max_local_searchv1,grid_heat_print,0.0008978843688964844,60,82.19178082,25;
+Sun Jun  5 20:17:30 2022,sample5_1,max_local_searchv1,grid_colour_print,0.0003540515899658203,60,82.19178082,25;
+Sun Jun  5 20:17:34 2022,sample5_1,max_local_searchv1,grid_coloured_print,0.0004119873046875,60,82.19178082,25;

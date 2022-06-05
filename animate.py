@@ -1,16 +1,14 @@
 # shows the process of the solver in an animated way 
 
-def grid_heat_print(length, height, arr, mask):
-    minV, maxV = get_min_max(arr)
-    diff = maxV - minV
+def animate(length, height, arr, red_mask = [], orange_mask = [], green_mask = [], blue_mask = []):
+    printing = ""
 
     for i in range(length):
         for j in range(height):
 
-            r,g,b = rgb(minV, maxV, int(arr[i][j]))
-            if (i, j) in mask:    
-                print("\x1b[38;2;"+str(r)+";"+str(g)+";"+str(b)+"m" + arr[i][j] + '\x1b[0m', end='')
+            if (i, j) in red_mask:    
+                printing += "\x1b[38;2;"+str(r)+";"+str(g)+";"+str(b)+"m" + arr[i][j] + '\x1b[0m'
             else: 
-                print(arr[i][j], end='')
+                printing += arr[i][j]
 
         print('')
