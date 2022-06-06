@@ -9,3 +9,9 @@ Sun Jun  5 20:17:22 2022,sample5_1,max_local_searchv1,grid_heat_print,0.00089788
 Sun Jun  5 20:17:30 2022,sample5_1,max_local_searchv1,grid_colour_print,0.0003540515899658203,60,82.19178082,25;
 Sun Jun  5 20:17:34 2022,sample5_1,max_local_searchv1,grid_coloured_print,0.0004119873046875,60,82.19178082,25;
 Sun Jun  5 20:23:49 2022,sample5_1,max_local_searchv1,grid_coloured_print,0.0014808177947998047,58,79.45205479,25;
+Mon Jun  6 21:21:29 2022,sample5_1,max_local_searchv1,grid_coloured_print,0.0007991790771484375,58,79.45205479,25;
+Mon Jun  6 21:22:54 2022,sample5_1,max_local_searchv1,grid_coloured_print,0.0011641979217529297,60,82.19178082,25;
+Mon Jun  6 21:24:31 2022,sample5_1,max_local_searchv3a,grid_coloured_print,0.0031790733337402344,69,94.52054795,25;
+Mon Jun  6 21:25:09 2022,sample5_1,max_local_searchv3a,grid_coloured_print,0.0017769336700439453,69,94.52054795,25;
+Mon Jun  6 21:26:41 2022,sample5_1,max_local_searchv3a,grid_coloured_print,0.0020949840545654297,69,94.52054795,25;
+Mon Jun  6 21:30:17 2022,sample5_1,max_local_searchv3a,grid_coloured_print,0.0023849010467529297,69,94.52054795,25;
