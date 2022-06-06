@@ -2,7 +2,6 @@
 
 from utility import get_min_max, get_weighed_max_score
 from colorama import Fore, Style
-from termcolor import colored
 
 # Takes in a masked cords and outputs to stdout the masked area
 def output_result(arr, length, height, mask, score, export_type, quota):
