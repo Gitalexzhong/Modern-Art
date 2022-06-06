@@ -1,4 +1,7 @@
 # shows the process of the solver in an animated way 
+import sys
+import time
+
 OKBLUE = '\033[94m'
 
 def animate_print(length, height, arr, red_mask = [], yellow_mask = [], green_mask = [], blue_mask = []):
@@ -20,4 +23,5 @@ def animate_print(length, height, arr, red_mask = [], yellow_mask = [], green_ma
 
         printing += '\n'
 
-    print(printing, end="\r")
+    time.sleep(0.005)
+    print(printing, end='\n')
