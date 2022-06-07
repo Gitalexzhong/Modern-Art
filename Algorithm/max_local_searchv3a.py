@@ -38,13 +38,13 @@ def solve_local_based(height, length, arr, quota, chosenStart):
         maxKey = max(pq.keys())
         newSelected = best_node_chooser(arr, convert_dict_zero(pq[maxKey]), int(math.sqrt(i)))
         
-        visitedMap[newSelected] = i + 2
-
         pq[maxKey].remove(newSelected)
         if pq[maxKey] == []:
             del pq[maxKey]
 
-        animate_print(length, height, arr, visitedMap, create_list_dict(pq))
+        animate_print(length, height, arr, visitedMap, create_list_dict(pq), [newSelected])
+
+        visitedMap[newSelected] = i + 2
 
         score += int(maxKey)
 
