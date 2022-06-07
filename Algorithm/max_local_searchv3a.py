@@ -40,11 +40,11 @@ def solve_local_based(height, length, arr, quota, chosenStart):
         
         visitedMap[newSelected] = i + 2
 
-        animate_print(length, height, arr, visitedMap)
-
         pq[maxKey].remove(newSelected)
         if pq[maxKey] == []:
             del pq[maxKey]
+
+        animate_print(length, height, arr, visitedMap, create_list_dict(pq))
 
         score += int(maxKey)
 
@@ -93,7 +93,9 @@ def best_node_chooser(arr, node_list, start_val_step = incremental_step_value, s
 
     return None
 
-if __name__ == '__main__': 
-    arr = [['0', '3', '5', '2', '2'], ['0', '9', '4', '6', '8'], ['5', '2', '9', '7', '8'], ['0', '4', '4', '1', '6'], ['2', '3', '8', '0', '7']]
-    node_list = {(1, 1): 0, (2, 2): 0}
-    best_node_chooser(arr, node_list)
+def create_list_dict(d):
+    l = []
+    for key in d.keys():
+        l += d[key]
+
+    return l
