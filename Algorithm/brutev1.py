@@ -2,7 +2,6 @@
 # Is memory limited and has basic non valid grid checker
 
 import itertools
-import math
 from utility import wrapped_tester
 
 def solve(l, b, arr, quota):
@@ -24,4 +23,4 @@ def solve(l, b, arr, quota):
                 max_score = score
                 output_map = test
             
-    return list(output_map), score
+    return list(output_map), max_score

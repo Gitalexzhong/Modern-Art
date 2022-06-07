@@ -11,6 +11,11 @@
  The goals of this challenge is the explore specific algorithms related to heat mapping and selection of values in a efficient manner. 
  It will also be a learning project to explore the use of full stack programming, including the use of API, frontend and backend implementations.
 
+# Usage
+```
+python3 main.py {Map Name} {Algorithm Name} {Output Style}
+```
+
 # Current technologies planned
 - [ ] Backend - Python
 - [ ] Frontend - Undecided 
@@ -55,6 +60,13 @@
     - Start on a max value 
     - Complete, Not optimal
 
+- [X] Max based Local Search 2.0 - local search algorithm
+  - Contains
+    - PQ system based
+    - Start on a max value 
+    - Complete, Not optimal
+    - Runs multiple times for every max start node 
+  
 - [ ] Bidirectional - max value based 
 
 # Sample Outputs 

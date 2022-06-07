@@ -1,4 +1,4 @@
-# Combinatorics based random solver with at least one soloution
+# Combinatorics based random solver with at least one solution
 # works better with larger grids
 # Has a max time limit of 10 mins 
 
