@@ -74,18 +74,23 @@ def convert_dict_zero(l):
 
 def best_node_chooser(arr, node_list, start_val_step = incremental_step_value, step_val = incremental_step_value): 
     max_range = start_val_step
+    height, length = len(arr), len(arr[0])
 
     while (1):
+        compared = set()
         for x, y in node_list:
             for item_x in range(len(arr)): 
                 for item_y in range(len(arr[0])): 
                     distance = sqrt(pow((x - item_x), 2) + pow((y - item_y), 2))
                     if distance <= max_range: 
                         node_list[(x, y)] += int(arr[item_x][item_y])
+                        compared.add((x, y))
 
         max_item_val = max(node_list.values())
         list_max = [key for key in node_list if node_list[key] == max_item_val]
-    
+        # print("hi")
+        animate_print(length, height, arr, [], [], [], compared)
+        # print("hi")
         if len(list_max) == 1:
             return list_max[0]
 

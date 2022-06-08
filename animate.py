@@ -17,7 +17,7 @@ def animate_print(length, height, arr, red_mask = [], yellow_mask = [], green_ma
             elif (i, j) in green_mask:    
                 printing += "\033[32m" + arr[i][j] + '\x1b[0m'
             elif (i, j) in blue_mask:    
-                printing += "\033[334" + arr[i][j] + '\x1b[0m'
+                printing += "\033[34m" + arr[i][j] + '\x1b[0m'
             else: 
                 printing += arr[i][j]
 
